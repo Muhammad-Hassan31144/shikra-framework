@@ -14,7 +14,7 @@ import path from 'path'
 export default defineConfig({
   plugins: [react(),tailwindcss()],
   
-  base: '/shikra-framework/',
+  base: '.',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
