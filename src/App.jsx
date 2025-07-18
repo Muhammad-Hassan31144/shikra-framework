@@ -19,7 +19,7 @@ function App() {
         <Header />
         <main className="relative z-10">
           <Routes>
-            <Route path="/" element={
+            <Route path="/shikra-framework" element={
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
