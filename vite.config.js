@@ -1,3 +1,10 @@
+if (typeof globalThis.crypto === "undefined") {
+  try {
+    globalThis.crypto = require("crypto").webcrypto;
+  } catch {
+    // fallback or warning
+  }
+}
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
@@ -13,7 +20,5 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-   define: {
-    'globalThis.crypto': 'require("crypto").webcrypto'
-  }
+  
 })
